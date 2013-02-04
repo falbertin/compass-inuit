@@ -1,6 +1,4 @@
-/*------------------------------------*\
-    $OPTIONS
-\*------------------------------------*/
+/* $OPTIONS */
 /**
  * Link-group nav, used for displaying related options. Extends `.nav--block`
  * but could also extend `.nav--fit`. Extend with colours and ‘current states’
@@ -16,24 +14,18 @@
  * Demo: jsfiddle.net/inuitcss/vwfaf
  * 
  */
-.options{
+.options {
     @extend .nav--block;
-
-    > li{
-
-        > a{
+    > li {
+        > a {
             border:0 solid #ccc; /* Extend in your theme stylesheet */
             border-width:1px;
             border-left-width:0;
         }
-
-        &:first-child > a{
+        &:first-child > a {
             border-left-width:1px;
             border-radius:$brand-round 0 0 $brand-round;
         }
-
-        &:last-child > a{
-            border-radius:0 $brand-round $brand-round 0;
-        }
+        &:last-child > a { border-radius:0 $brand-round $brand-round 0; }
     }
 }

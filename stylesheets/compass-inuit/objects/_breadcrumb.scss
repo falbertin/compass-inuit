@@ -1,6 +1,4 @@
-/*------------------------------------*\
-    $BREADCRUMB
-\*------------------------------------*/
+/* $BREADCRUMB */
 /**
  * Simple breadcrumb styling to apply to (ordered) lists. Extends `.nav`, e.g.:
  * 
@@ -14,10 +12,7 @@
  * Demo: jsfiddle.net/inuitcss/rkAY9
  * 
  */
-.breadcrumb > li + li:before{
-    content:"» ";
-}
-
+.breadcrumb > li + li:before { content:"» "; }
 
 /**
  * For denoting a path-like structure, GitHub style, e.g.:
@@ -30,10 +25,7 @@
    </ol>
  * 
  */
-.breadcrumb--path > li + li:before{
-    content:"/ ";
-}
-
+.breadcrumb--path > li + li:before { content:"/ "; }
 
 /**
  * Assign a delimiter on the fly through a data attribute, e.g.:
@@ -46,14 +38,8 @@
    </ol>
  * 
  */
-.breadcrumb > li + li[data-breadcrumb]:before{
-    content:attr(data-breadcrumb)" ";
-}
+.breadcrumb > li + li[data-breadcrumb]:before { content:attr(data-breadcrumb)" "; }
 
+// Denote the root of the tree.
 
-/**
- * Denote the root of the tree.
- */
-.breadcrumb__root{
-    font-weight:bold;
-}
+.breadcrumb__root{ font-weight:bold; }

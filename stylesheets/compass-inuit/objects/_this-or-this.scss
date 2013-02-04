@@ -1,6 +1,4 @@
-/*------------------------------------*\
-    $THIS-OR-THIS
-\*------------------------------------*/
+/* $THIS-OR-THIS */
 /**
  * Simple options object to provide multiple choices, e.g.:
  * 
@@ -22,13 +20,13 @@
  * Demo: jsfiddle.net/inuitcss/R3sks
  * 
  */
-.this-or-this{
+.this-or-this {
     display:table;
     width:100%;
     text-align:center;
 }
-    .this-or-this__this,
-    .this-or-this__or{
-        display:table-cell;
-        vertical-align:middle;
-    }
+.this-or-this__this,
+.this-or-this__or {
+    display:table-cell;
+    vertical-align:middle;
+}

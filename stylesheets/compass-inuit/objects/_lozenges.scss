@@ -1,6 +1,4 @@
-/*------------------------------------*\
-    $LOZENGES
-\*------------------------------------*/
+/* $LOZENGES */
 /**
  * Create pill- and lozenge-like runs of text, e.g.:
  * 
@@ -13,21 +11,20 @@
  * Demo: jsfiddle.net/inuitcss/N3pGm
  * 
  */
-.pill{
+.pill {
     display:inline-block;
     /**
      * These numbers set in ems mean that, at its narrowest, a lozenge will be
      * the same width as the `line-height` set on the `html` element.
      * This allows us to use the `.loz` in almost any `font-size` we wish.
      */
-    min-width:    ($line-height-ratio * 0.666667) * 1em;
+    min-width: ($line-height-ratio * 0.666667) * 1em;
     padding-right:($line-height-ratio * 0.166667) * 1em;
     padding-left: ($line-height-ratio * 0.166667) * 1em;
               /* =1.50em */
     text-align:center;
     background-color:#ccc; /* Override this color in your theme stylesheet */
     color:#fff; /* Override this color in your theme stylesheet */
-    
     /**
      * Normally we’d use border-radius:100%; but instead here we just use an
      * overly large number; `border-radius:100%;` would create an oval on
@@ -36,7 +33,7 @@
     border-radius:100px;
 }
 
-.loz{
+.loz {
     @extend .pill;
     border-radius:$brand-round;
 }

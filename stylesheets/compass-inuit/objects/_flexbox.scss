@@ -1,6 +1,4 @@
-/*------------------------------------*\
-    $FLEXBOX
-\*------------------------------------*/
+/* $FLEXBOX */
 /**
  * Until we can utilise flexbox natively we can kinda, sorta, attempt to emulate
  * it, in a way... e.g.:
@@ -32,20 +30,19 @@
  * Demo: jsfiddle.net/inuitcss/ufUh2
  * 
  */
-.flexbox{
+.flexbox {
     display:table;
     width:100%;
 }
 
-/**
- * Nasty hack to circumvent Modernizr conflicts.
- */
+// Nasty hack to circumvent Modernizr conflicts.
+
 html.flexbox{
     display:block;
     width:auto;
 }
     
-    .flexbox__item{
-        display:table-cell;
-        vertical-align:middle;
-    }
+.flexbox__item{
+    display:table-cell;
+    vertical-align:middle;
+}

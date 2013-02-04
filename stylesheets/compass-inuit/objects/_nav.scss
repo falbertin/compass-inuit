@@ -1,6 +1,4 @@
-/*------------------------------------*\
-    $NAV
-\*------------------------------------*/
+/* $NAV */
 /**
  * Nav abstraction as per: csswizardry.com/2011/09/the-nav-abstraction
  * When used on an `ol` or `ul`, this class throws the list into horizontal mode
@@ -16,22 +14,18 @@
  * Demo: jsfiddle.net/inuitcss/Vnph4
  * 
  */
-.nav{
+.nav {
     list-style:none;
     margin-left:0;
     @extend .cf;
-
-    > li{
-
-        &,
-        > a{
+    > li {
+        &, > a{
             display:inline-block;
            *display:inline;
             zoom:1;
         }
     }
 }
-
 
 /**
  * `.nav--stacked` extends `.nav` and throws the list into vertical mode, e.g.:
@@ -45,16 +39,11 @@
  * 
  */
 .nav--stacked{
-    
-    > li{
+    > li {
         display:list-item;
-
-        > a{
-            display:block;
-        }
+        > a { display:block; }
     }
 }
-
 
 /**
  * `.nav--banner` extends `.nav` and centres the list, e.g.:
@@ -67,10 +56,7 @@
    </ul>
  * 
  */
-.nav--banner{
-    text-align:center;
-}
-
+.nav--banner { text-align:center; }
 
 /**
  * Give nav links a big, blocky hit area. Extends `.nav` and needs whitespace
@@ -84,17 +70,12 @@
    </ul>
  * 
  */
-.nav--block{
+.nav--block {
     line-height:1;
-    
-    > li{
-        
-        > a{
-            padding:$half-spacing-unit;
-        }
+    > li {
+        > a { padding:$half-spacing-unit; }
     }
 }
-
 
 /**
  * Force a nav to occupy 100% of the available width of its parent. Extends
@@ -109,19 +90,14 @@
  * 
  * Thanks to @pimpl for this idea!
  */
-.nav--fit{
+.nav--fit {
     display:table;
-    width:100%;
-        
-    > li{
+    width:100%; 
+    > li {
         display:table-cell;
-        
-        > a{
-            display:block;
-        }
+        > a { display:block; }
     }
 }
-
 
 /**
  * Make a list of keywords. Extends `.nav`, e.g.:
@@ -129,16 +105,9 @@
    `<ul class="nav  nav--keywords>`
  * 
  */
-.nav--keywords{
-    
-    > li{
-        
-        &:after{
-            content:", ";
-        }
-         
-        &:last-child:after{
-            display:none;
-        }
+.nav--keywords {
+    > li {
+        &:after { content:", "; }
+        &:last-child:after { display:none; }
     }
 }

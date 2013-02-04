@@ -1,143 +1,88 @@
-/*------------------------------------*\
-    $ARROWS
-\*------------------------------------*/
+/* $ARROWS */
 /**
  * It is a common design treatment to give an element a triangular points-out
  * arrow, we typically build these with CSS. These following classes allow us to
  * generate these arbitrarily with a mixin, `@arrow()`.
  */
 
-$arrow-size:            $half-spacing-unit;
-$arrow-border:          1;
-$border:                $arrow-size;
-$arrow:                 $arrow-size - $arrow-border;
+$arrow-size: $half-spacing-unit;
+$arrow-border: 1;
+$border: $arrow-size;
+$arrow: $arrow-size - $arrow-border;
 
-/**
- * Forms the basis for any/all CSS arrows.
- */
-%arrow{
-    position:relative;
-    
-    &:before,
-    &:after{
+// Forms the basis for any/all CSS arrows.
+
+%arrow {
+    position:relative;    
+    &:before, &:after {
         content:"";
         position:absolute;
         border-collapse:separate;
     }
-    &:before{
-        border:$border solid transparent;
-    }
-    &:after{
-        border:$arrow solid transparent;
-    }
+    &:before { border:$border solid transparent; }
+    &:after { border:$arrow solid transparent; }
 }
 
+// Define individual edges so we can combine what we need, when we need.
 
-/**
- * Define individual edges so we can combine what we need, when we need.
- */
-%arrow--top{
+%arrow--top {
     @extend %arrow;
-    
-    &:before,
-    &:after{
-        bottom:100%;
-    }
+    &:before, &:after{ bottom:100%; }
 }
 
-%arrow--upper{
+%arrow--upper {
     @extend %arrow;
-    
-    &:before{
-        top:$arrow;
-    }
-    &:after{
-        top:$border;
-    }
+    &:before { top:$arrow; }
+    &:after { top:$border; }
 }
 
-%arrow--middle{
+%arrow--middle {
     @extend %arrow;
-
-    &:before,
-    &:after{
+    &:before, &:after {
         top:50%;
         margin-top:-$border;
     }
-    &:after{
-        margin-top:-$arrow;
-    }
+    &:after { margin-top:-$arrow; }
 }
 
-%arrow--lower{
+%arrow--lower {
     @extend %arrow;
-    
-    &:before{
-        bottom:$arrow;
-    }
-    &:after{
-        bottom:$border;
-    }
+    &:before { bottom:$arrow; }
+    &:after { bottom:$border; }
 }
 
-%arrow--bottom{
+%arrow--bottom {
     @extend %arrow;
-    
-    &:before,
-    &:after{
-        top:100%;
-    }
+    &:before, &:after { top:100%; }
 }
 
-%arrow--near{
+%arrow--near {
     @extend %arrow;
-    
-    &:before,
-    &:after{
-        right:100%;
-    }
+    &:before, &:after { right:100%; }
 }
 
-%arrow--left{
+%arrow--left {
     @extend %arrow;
-    
-    &:before{
-        left:$arrow;
-    }
-    &:after{
-        left:$border;
-    }
+    &:before { left:$arrow; }
+    &:after { left:$border; }
 }
 
-%arrow--center{
+%arrow--center {
     @extend %arrow;
-    
-    &:before,
-    &:after{
+    &:before, &:after{
         left:50%;
         margin-left:-$border;
     }
-    &:after{
-        margin-left:-$arrow;
-    }
+    &:after { margin-left:-$arrow; }
 }
 
-%arrow--right{
+%arrow--right {
     @extend %arrow;
-    
-    &:before{
-        right:$arrow;
-    }
-    &:after{
-        right:$border;
-    }
+    &:before { right:$arrow; }
+    &:after { right:$border; }
 }
 
-%arrow--far{
+%arrow--far {
     @extend %arrow;
-    
-    &:before,
-    &:after{
-        left:100%;
-    }
+    &:before, &:after { left:100%; }
 }

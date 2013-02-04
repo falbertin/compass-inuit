@@ -1,13 +1,11 @@
-/*------------------------------------*\
-    $RULES
-\*------------------------------------*/
+/* $RULES */
 /**
  * Horizontal rules, extend `hr`.
  * 
  * Demo: jsfiddle.net/inuitcss/L6GuZ
  * 
  */
-.rule{
+.rule {
     color:#ccc; /* Sets border color, extend in your theme stylesheet. */
     border:none;
     border-bottom-width:1px;
@@ -16,30 +14,19 @@
     margin-bottom:(($base-spacing-unit - 1px) / $base-font-size)*1rem;
 }
 
+// Dotted rules
 
-/**
- * Dotted rules
- */
-.rule--dotted{
-    border-bottom-style:dotted;
-}
+.rule--dotted { border-bottom-style:dotted; }
 
+// Dashed rules
 
-/**
- * Dashed rules
- */
-.rule--dashed{
-    border-bottom-style:dashed;
-}
+.rule--dashed { border-bottom-style:dashed; }
 
+// Ornamental rules. Places a § over the rule.
 
-/**
- * Ornamental rules. Places a § over the rule.
- */
-.rule--ornament{
+.rule--ornament {
     position:relative;
-
-    &:after{
+    &:after {
         content:"§";
         position:absolute;
         top:   0;
@@ -48,14 +35,7 @@
         line-height:0;
         text-align:center;
     }
-
-    /**
-    * Pass in an arbitrary ornament though a data attribute, e.g.:
-    * 
-      <hr class="rule  rule--ornament" data-ornament="!">
-    * 
-    */
-    &[data-ornament]:after{
-        content:attr(data-ornament);
-    }
+    // Pass in an arbitrary ornament though a data attribute, e.g.:
+    // <hr class="rule  rule--ornament" data-ornament="!">
+    &[data-ornament]:after { content:attr(data-ornament); }
 }

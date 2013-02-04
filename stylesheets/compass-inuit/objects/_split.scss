@@ -1,6 +1,4 @@
-/*------------------------------------*\
-    $SPLIT
-\*------------------------------------*/
+/* $SPLIT */
 /**
  * Simple split item for creating two elements floated away from one another,
  * e.g.:
@@ -23,13 +21,14 @@
  * Demo: jsfiddle.net/inuitcss/9gZW7
  * 
  */
-.split{
+.split {
     text-align:right;
     list-style:none;
     margin-left:0;
 }
-    .split__title{
-        text-align:left;
-        float:left;
-        clear:left;
-    }
+
+.split__title {
+    text-align:left;
+    float:left;
+    clear:left;
+}

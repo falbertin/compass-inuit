@@ -1,6 +1,4 @@
- /*------------------------------------*\
-     $STATS
- \*------------------------------------*/
+ /* $STATS */
  /**
   * Simple object to display key–value statistic-like information, e.g.: 
   *
@@ -24,25 +22,25 @@
   * Demo: jsfiddle.net/inuitcss/Bpwu6
   *
   */
- .stat-group{
+.stat-group {
     @extend .cf;
     margin-left:-$base-spacing-unit;
 }
-    .stat{
-        float:left;
-        margin-left:$base-spacing-unit;
-        display:-ms-flexbox;
-        display:-webkit-flex;
-        display:   -moz-flex;
-        display:        flex;
-        @include vendor(flex-direction, column);
-    }
-        .stat__title{
-            @include vendor(order, 2);
-            -ms-flex-order:2;
-        }
-        .stat__value{
-            margin-left:0;
-            @include vendor(order, 1);
-            -ms-flex-order:1;
-        }
+.stat {
+    float:left;
+    margin-left:$base-spacing-unit;
+    display:-ms-flexbox;
+    display:-webkit-flex;
+    display:-moz-flex;
+    display:flex;
+    @include vendor(flex-direction, column);
+}
+.stat__title {
+    @include vendor(order, 2);
+    -ms-flex-order:2;
+}
+.stat__value {
+    margin-left:0;
+    @include vendor(order, 1);
+    -ms-flex-order:1;
+}

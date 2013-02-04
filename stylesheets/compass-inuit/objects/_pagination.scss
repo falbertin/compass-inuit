@@ -1,6 +1,4 @@
-/*------------------------------------*\
-    $PAGINATION
-\*------------------------------------*/
+/* $PAGINATION */
 /**
  * Basic pagination object, extends `.nav`.
  * Requires some funky commenting to collapse any white-space caused by the
@@ -21,19 +19,16 @@
  * Demo: jsfiddle.net/inuitcss/9Y6PU
  * 
  */
-.pagination{
+.pagination { 
     text-align:center;
-}
-    .pagination > li{
+    > li {
         padding:$base-spacing-unit / 2;
-    }
-        .pagination > li > a{
+        a {
             padding:$base-spacing-unit / 2;
             margin:-$base-spacing-unit / 2;
-        }    
-            .pagination__first a:before{
-                content:"« ";
-            }
-            .pagination__last a:after{
-                content:" »";
-            }
+        }
+    }
+}
+
+.pagination__first a:before { content:"« "; }
+.pagination__last a:after { content:" »"; }
