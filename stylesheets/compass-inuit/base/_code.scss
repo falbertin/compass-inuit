@@ -1,33 +1,24 @@
-/*------------------------------------*\
-    $CODE
-\*------------------------------------*/
-/**
- * Use an explicit font stack to ensure browsers render correct `line-height`.
- */
-pre{
+/* $CODE */
+
+// Use an explicit font stack to ensure browsers render correct `line-height`.
+
+pre { 
     overflow:auto;
-}
-    pre mark{
+    mark {
         background:none;
         border-bottom:1px solid;
         color:inherit;
     }
+}
 
+// Add comments to your code examples, e.g.: 
+// <code>&lt;/div&gt;<span class=code-comment>&lt;!-- /wrapper --&gt;</span></code>
 
-/**
- * Add comments to your code examples, e.g.:
- * 
-   <code>&lt;/div&gt;<span class=code-comment>&lt;!-- /wrapper --&gt;</span></code>
- * 
- */
-.code-comment{
-    /**
-     * Override this setting in your theme stylesheet
-     */
+.code-comment {
+    // Override this setting in your theme stylesheet
     opacity:0.75;
     filter:alpha(opacity=75);
 }
-
 
 /**
  * You can add line numbers to your code examples but be warned, it requires
@@ -57,7 +48,5 @@ pre{
     white-space:nowrap;                     /* [3] */
     overflow:auto;                          /* [3] */
     margin-left:0;
+    code { white-space:pre; }               /* [4] */
 }
-    .line-numbers code{
-        white-space:pre;                    /* [4] */
-    }

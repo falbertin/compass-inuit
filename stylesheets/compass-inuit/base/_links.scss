@@ -1,22 +1,13 @@
-/*------------------------------------*\
-    $LINKS
-\*------------------------------------*/
+/* $LINKS */
 /**
  * Say no to negative hovers, as per: csswizardry.com/2011/05/on-negative-hovers
  *
  * Sometimes, particularly on larger projects, it is useful to scope link
  * styling only to anchors which have `href` attributes.
  */
-a{
-    /**
-     * Set colors etc in your theme stylesheet.
-     */
-
-    &:hover,
-    &:active,
-    &:focus{
-        text-decoration:underline;
-    }
+a {
+    // Set colors etc in your theme stylesheet.
+    &:hover, &:active, &:focus { text-decoration:underline; }
 }
 
 
@@ -31,7 +22,7 @@ a{
    </ul>
  * 
  */
-.current > a{
+.current > a {
     cursor:text;
     text-decoration:underline;
 }

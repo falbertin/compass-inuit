@@ -1,38 +1,27 @@
-/*------------------------------------*\
-    $FORMS
-\*------------------------------------*/
-/**
- * 
- * Demo: jsfiddle.net/inuitcss/MhHHU
- * 
- */
-fieldset{
-    padding:$base-spacing-unit;
-}
+/* $FORMS */
 
+// Demo: jsfiddle.net/inuitcss/MhHHU
+
+fieldset { padding:$base-spacing-unit; }
 
 /**
  * Text inputs
  * 
  * Instead of a `[type]` selector for each kind of form input, we just use a
  * class to target any/every one, e.g.:
-   <input type=text class=text-input>
-   <input type=email class=text-input>
-   <input type=password class=text-input>
+   <input type="text" class="text-input">
+   <input type="email" class="text-input">
+   <input type="password" class="text-input">
  * 
  */
-.text-input,
-textarea{
-    /**
-     * Style these via your theme stylesheet.
-     */
+.text-input, textarea {
+    // Style these via your theme stylesheet
 }
-
 
 /**
  * Group sets of form fields in a list, e.g.:
  * 
-   <ul class=form-fields>
+   <ul class="form-fields">
        <li>
            <label />
            <input />
@@ -48,17 +37,14 @@ textarea{
    </ul>
  * 
  */
-.form-fields{
+.form-fields {
     list-style:none;
     margin:0;
-}
-    .form-fields > li{
+    > li {
         @extend %sass-margin-bottom;
+        &:last-child { margin-bottom:0; }
     }
-    .form-fields > li:last-child{
-        margin-bottom:0;
-    }
-
+}
 
 /**
  * Labels
@@ -68,7 +54,7 @@ textarea{
  * element is not suitable, e.g.:
  * 
    <li>
-       <span class=label>Select an option below:</span>
+       <span class="label">Select an option below:</span>
        <ul class="multi-list  four-cols">
            <li>
                <input /> <label />
@@ -86,27 +72,19 @@ textarea{
    </li>
  * 
  */
-label,
-.label{
+label, .label { display:block; }
+    // Extra help text in `label`s, e.g.:
+    // <label>Card number <small class=additional>No spaces</small></label>
+.additional {
     display:block;
+    font-weight:normal;
 }
-    /**
-     * Extra help text in `label`s, e.g.:
-     * 
-       <label>Card number <small class=additional>No spaces</small></label>
-     * 
-     */
-    .additional{
-        display:block;
-        font-weight:normal;
-    }
-
 
 /*
  * Groups of checkboxes and radios, e.g.:
  * 
    <li>
-       <ul class=check-list>
+       <ul class="check-list">
            <li>
                <input /> <label />
            </li>
@@ -117,19 +95,14 @@ label,
    </li>
  * 
  */
-.check-list{
+.check-list {
     list-style:none;
     margin:0;
 }
-    /*
-     * Labels in check-lists
-     */
-    .check-label,
-    .check-list label,
-    .check-list .label{
-        display:inline-block;
-    }
-
+// Labels in check-lists
+.check-label,
+.check-list label,
+.check-list .label { display:inline-block; }
 
 /**
  * Spoken forms are for forms that read like spoken word, e.g.:
@@ -146,11 +119,10 @@ label,
    </li>
  * 
  */
-.spoken-form label{
+.spoken-form label {
     display:inline-block;
     font:inherit;
 }
-
 
 /**
  * Extra help text displayed after a field when that field is in focus, e.g.:
@@ -164,11 +136,12 @@ label,
  * it reappears.
  * 
  */
-/*small*/.extra-help{
+/*small*/.extra-help {
     display:inline-block;
     visibility:hidden;
 }
-.text-input:active + .extra-help,
-.text-input:focus + .extra-help{
-    visibility:visible;
+.text-input {
+    &:active, &:focus {
+        + .extra-help { visibility:visible; }
+    }
 }

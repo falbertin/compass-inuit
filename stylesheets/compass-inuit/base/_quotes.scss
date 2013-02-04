@@ -1,70 +1,59 @@
-/*------------------------------------*\
-    $QUOTES
-\*------------------------------------*/
-/**
- * If English quotes are set in `_vars.scss`, define them here.
- */
+/* $QUOTES */
+
+// If English quotes are set in `_vars.scss`, define them here.
+
 @if $english-quotes == true{
     $open-quote:    “;
     $close-quote:   ”;
 }
 
+// Big up @boblet: html5doctor.com/blockquote-q-cite
 
-/**
- * Big up @boblet: html5doctor.com/blockquote-q-cite
- */
+// Inline quotes.
 
-/**
- * Inline quotes.
- */
-q{
+q {
     quotes:"‘" "’" "#{$open-quote}" "#{$close-quote}";
-
-    &:before{
+    &:before {
         content:"‘";
         content:open-quote;
     }
-    &:after{
+    &:after {
         content:"’";
         content:close-quote;
     }
-
-    q:before{
+    q:before {
         content:"“";
         content:open-quote;
     }
-    q:after{
+    q:after {
         content:"”";
         content:close-quote;
     }
 }
 
-blockquote{
+blockquote {
     quotes:"#{$open-quote}" "#{$close-quote}";
-    
-    p:before{
+    p:before {
         content:"#{$open-quote}";
         content:open-quote;
     }
-    p:after{
+    p:after {
         content:"";
         content:no-close-quote;
     }
-    p:last-of-type:after{
+    p:last-of-type:after {
         content:"#{$close-quote}";
         content:close-quote;
     }
-
-    q:before{
+    q:before {
         content:"‘";
         content:open-quote;
     }
-    q:after{
+    q:after {
         content:"’";
         content:close-quote;
     }
 }
-
 
 /**
  * 
@@ -75,22 +64,14 @@ blockquote{
    </blockquote>
  * 
  */
-blockquote{
-    /**
-     * .4em is roughly equal to the width of the opening “ that we wish to hang.
-     */
+blockquote {
+    // .4em is roughly equal to the width of the opening “ that we wish to hang.
     text-indent:-0.41em;
-    
-    p:last-of-type{
-        margin-bottom:0;
-    }
+    p:last-of-type { margin-bottom:0; }
 }
 
-.source{
+.source {
     display:block;
     text-indent:0;
-    
-    &:before{
-        content:"—";
-    }
+    &:before { content:"—"; }
 }
