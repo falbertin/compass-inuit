@@ -2,8 +2,11 @@
 
 A powerful little Compass extension for inuit.css for _insanely serious_ developers.
 
-## Contribe
+## Contrib
 Please fork this repository, then submit a pull request with your changes in a new topic branch.
+
+###This fork
+I forked Inuit to create a version that wastes less space inside .scss files and uses more SASS compliant SCSS syntax at the same time. Run a diff to upstream/master to see what I mean.
 
 ## Installation
 
@@ -119,4 +122,4 @@ This makes it super simple to pick and choose what you want for your project.
 ## Credits
 Based on **[Harry Roberts's](http://github.com/csswizardry)** inuit.css framework.
 
-This extension was created by **[Stephen Way](http://github.com/stephenway)**
+This extension was created by **[Stephen Way](http://github.com/stephenway)** and improved upon by **[Fabio Albertin](http://github.com/sengeezer)**

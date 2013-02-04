@@ -1,19 +1,11 @@
 @charset "UTF-8";
-/*------------------------------------*\
-    YOUR-PROJECT.CSS
-\*------------------------------------*/
-/**
- *
- * compass watch
- *
- * Here we set up some variables, include the inuit.css framework, then add our
- * project-specific components afterwards.
- */
+/* YOUR-PROJECT.CSS */
 
+// Here we set up some variables, include the inuit.css framework, then add our
+// project-specific components afterwards.
 
-/**
- * Setup
- */
+// Setup
+
 @import "vars";
 
 // Optionally Import Everything
@@ -79,20 +71,16 @@
 @import "compass-inuit/objects/greybox";
 @import "compass-inuit/objects/batch";
 
-/**
- * She’s all yours, cap’n... Begin importing your stuff here.
- */
+// She’s all yours, cap’n... Begin importing your stuff here
 
-html{
+html {
     font: 1em/1.5 Georgia, serif;
     background-color: #fff;
     color: #333;
 }
-.wrapper{
+.wrapper {
     max-width: 960px;
     padding: 0 24px;
     margin: 0 auto;
 }
-.footer{
-    margin-bottom: 0;
-}
+.footer { margin-bottom: 0; }
